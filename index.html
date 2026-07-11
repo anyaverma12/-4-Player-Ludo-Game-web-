@@ -292,13 +292,13 @@
 
             <div class="dice-container" onclick="rollDice()">
                 <div id="dice3d">
-                    <div class="side">⚀</div>
-                    <div class="side">⚄</div>
-                    <div class="side">⚂</div>
-                    <div class="side">⚃</div>
-                    <div class="side">⚁</div>
-                    <div class="side">⚅</div>
-                </div>
+    <div class="side">⚀</div>
+    <div class="side">⚁</div> <!-- Corrected to 2 -->
+    <div class="side">⚂</div>
+    <div class="side">⚃</div>
+    <div class="side">⚄</div> <!-- Corrected to 5 -->
+    <div class="side">⚅</div>
+    </div>
             </div>
 
             <button class="btn" onclick="location.reload()">Restart Game</button>
@@ -395,13 +395,9 @@
         }
 
         const rotationalMatrix = [
-    { x: 0, y: 0 },    
-    { x: -90, y: 0 },  
-    { x: 0, y: -90 },  
-    { x: 0, y: 90 },   
-    { x: 90, y: 0 },   
-    { x: 0, y: 180 }   
-    ];
+            { x: 0, y: 0 }, { x: -90, y: 0 }, { x: 0, y: -90 }, 
+            { x: 0, y: 90 }, { x: 90, y: 0 }, { x: 0, y: 180 }
+        ];
 
         function rollDice() {
             if (hasRolled) return;
